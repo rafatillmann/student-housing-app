@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Residencial 01",
+        "alojamentos": 2,
+        "endereco": "Rua Lauro Linhares",
+        "mapa": {
+            "lat": 2222,
+            "lng": 2222
+        },
+        "valor": 1000,
+        "tipo_moradia": "",
+        "tipo_alojamento": "",
+        "mobiliario": [
+            {
+                "nome": ""
+            }
+        ],
+        "banheiro": "",
+        "area": "",
+        "fotos": [
+            {
+                "link": ""
+            }
+        ],
+        "area_comum": "",
+        "video": "",
+        "telefone": "",
+        "email": "",
+        "descricao": ""
+    }
+
+]
