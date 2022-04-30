@@ -2,14 +2,14 @@ import * as React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
-import HomeScreen from './Home'
-import ContactListScreen from './HomeList';
-import ContactDetailsScreen from './HomeDetails';
+import HomeScreen from './src/screens/Home'
+import HomeListScreen from './src/screens/HomeList';
+import HomeDetailsScreen from './src/screens/HomeDetails';
 
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
-  ContactList: {screen: ContactListScreen},
-  ContactDetails: {screen: ContactDetailsScreen},
+  HomeList: {screen: HomeListScreen},
+  HomeDetails: {screen: HomeDetailsScreen},
 });
  
 const App = createAppContainer(MainNavigator);

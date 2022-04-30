@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Button, Linking} from 'react-native';
  
-export default class ContactDetailsScreen extends React.Component {
+export default class HomeDetailsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Dados do Contato',
+    title: 'Informações',
   };
  
   constructor(props) {
     super(props);
-    let contact = props.navigation.getParam('contact');
+    let contact = props.navigation.getParam('home');
     this.state = {
       name: contact.name,
       email: contact.email,
@@ -29,7 +29,7 @@ export default class ContactDetailsScreen extends React.Component {
           <Text style={styles.contactDetails}>Telefone: {phone}</Text>
         </View>
         <View style={styles.button} >
-          <Button title="Voltar" onPress={() => navigate('ContactList')} />
+          <Button title="Voltar" onPress={() => navigate('ContactList')} color='black'/>
         </View>
       </View>
     );
