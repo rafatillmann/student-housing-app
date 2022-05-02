@@ -12,29 +12,6 @@ export default class HomeListScreen extends React.Component {
     this.state = { isLoading: true }
   }
 
-  componentDidMount() {
-    const { navigation } = this.props;
-
-    this.focusListener = navigation.addListener('didFocus', () => {
-      return fetch('https://jsonplaceholder.typicode.com/users')
-        .then((response) => response.json())
-        .then((json) => {
-          this.setState({
-            isLoading: false,
-            contacts: json,
-          }, function () {
-          });
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    });
-  }
-
-  componentWillUnmount() {
-    this.focusListener.remove();
-  }
-
   render() {
     if (this.state.isLoading) {
       return (
@@ -45,14 +22,15 @@ export default class HomeListScreen extends React.Component {
     }
 
     const { navigate } = this.props.navigation;
+    const homes = require('../../home.json');
     return (
       <>
         <FlatList
-          data={this.state.contacts}
-          renderItem={({ item }) =>
-            <TouchableOpacity onPress={() => navigate('HomeDetails', { home: item })}>
+          data={homes}
+          renderItem={({ home }) =>
+            <TouchableOpacity onPress={() => navigate('HomeDetails', { home: home })}>
               <View>
-                <Text style={styles.contact}>{item.name}</Text>
+                <Text style={styles.contact}>{home.nome}</Text>
               </View>
             </TouchableOpacity>}
         />
