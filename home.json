@@ -1,32 +1,117 @@
 [
     {
-        "nome": "Residencial 01",
-        "alojamentos": 2,
-        "endereco": "Rua Lauro Linhares",
-        "mapa": {
-            "lat": 2222,
-            "lng": 2222
-        },
-        "valor": 1000,
-        "tipo_moradia": "",
-        "tipo_alojamento": "",
-        "mobiliario": [
-            {
-                "nome": ""
-            }
-        ],
-        "banheiro": "",
-        "area": "",
-        "fotos": [
-            {
-                "link": ""
-            }
-        ],
-        "area_comum": "",
-        "video": "",
-        "telefone": "",
-        "email": "",
-        "descricao": ""
+      "id": 1,
+      "nome": "Residencial 01",
+      "alojamentos": 10,
+      "endereco": "Rua Lauro Linhares, 157 - Trindade",
+      "mapa": {
+        "lat": -27.594433646868346, 
+        "lng": -48.500383819024215
+      },
+      "valor": 1500,
+      "tipo_moradia": "mista",
+      "tipo_alojamento": "individual",
+      "mobiliario": "Oferecemos colchões AA Ortobom, mesmo utilizados em hotéis 5 estrelas, apartamento amplo e eficiente, 100% recém reformados, móveis embutidos, ar-condicionado, cozinha equipada por completo, com geladeira, microondas, cooktop e utensílios para cozinhar.",
+      "banheiro": "privativo",
+      "area": "20m²",
+      "foto": "https://www.airbnb.com.br/rooms/20502144/photos/370133024?federated_search_id=19fe09de-cddb-465e-8396-8285aea630f8&source_impression_id=p3_1651099338_2B1sqL9kRWNhrIQd",
+      "area_comum": "Piscina",
+      "video": "https://youtu.be/M91zDgqXZ3s",
+      "telefone": "(48)99976-6453",
+      "email": "residencial01@gmail.com",
+      "descricao": "Pousada preparada com apartamentos completos e planejados, mobiliados com móveis embutidos, sempre prezando pela limpeza, organização e bem-estar. Prédio com 32 unidades, todas com seu próprio quarto, banheiro e cozinha."
+    },
+  
+    {
+      "id": 2,
+      "nome": "Residencial 02",
+      "alojamentos": 15,
+      "endereco": "Rua Delfino Conti, 17 - Trindade",
+      "mapa": {
+        "lat": -27.594433646868346, 
+        "lng": -48.500383819024215
+      },
+      "valor": 1200,
+      "tipo_moradia": "feminina",
+      "tipo_alojamento": "individual",
+      "mobiliario": "Ar-condicionado, cozinha equipada por completo, com geladeira, microondas, cooktop e utensílios para cozinhar.",
+      "banheiro": "privativo",
+      "area": "18m²",
+      "foto": "https://a0.muscache.com/im/pictures/miso/Hosting-563860180269901012/original/32c61338-9add-43a6-9a80-1adb18b39663.jpeg?im_w=960",
+      "area_comum": "Piscina, Coworking e jardim de inverno",
+      "video": "https://youtu.be/gmQQrWaL4AY",
+      "telefone": "(48)9987-9827",
+      "email": "residencial02@gmail.com",
+      "descricao": "Excelente Studio localizado no coração de Florianopolis. Próximo a mercados, bares, universidades, shoppings e no caminho de todas as praias da ilha."
+    },
+  
+    {
+      "id": 3,
+      "nome": "Residencial 03",
+      "alojamentos": 8,
+      "endereco": "Av. Ângelo Crema, 90 - Córrego Grande",
+      "mapa": {
+        "lat": -27.59554994335299,  
+        "lng": -48.50179548380447
+      },
+      "valor": 1300,
+      "tipo_moradia": "masculina",
+      "tipo_alojamento": "individual",
+      "mobiliario": "Cozinha com frigobar, cooktop, micro-ondas, sanduicheira, liquidificador, pratos e talheres, copos, taças de vinho e de champanhe. Espaço reservado para as malas, e guarda-roupas em drywall.",
+      "banheiro": "privativo",
+      "area": "16,5m²",
+      "foto": "https://a0.muscache.com/im/pictures/miso/Hosting-563860180269901012/original/32c61338-9add-43a6-9a80-1adb18b39663.jpeg?im_w=960",
+      "area_comum": "Coworking",
+      "video": "https://youtu.be/zkcDlKtdCc0",
+      "telefone": "(48)9980-2227",
+      "email": "residencial03@gmail.com",
+      "descricao": "Com uma decoração aconchegante e romântica, este apartamento compacto é ideal para noite de núpcias ou aniversário de bodas."
+    },
+  
+    {
+      "id": 4,
+      "nome": "Residencial 4",
+      "alojamentos": 18,
+      "endereco": "Av. Deputado Antônio Edu Vieira, 78 - Pantanal",
+      "mapa": {
+        "lat": -27.59554994335299,  
+        "lng": -48.50179548380447
+      },
+      "valor": 1300,
+      "tipo_moradia": "masculina",
+      "tipo_alojamento": "individual",
+      "mobiliario": "Cozinha com frigobar, cooktop, micro-ondas, sanduicheira, liquidificador, pratos e talheres, copos, taças de vinho e de champanhe. Espaço reservado para as malas, e guarda-roupas em drywall.",
+      "banheiro": "privativo",
+      "area": "16,5m²",
+      "foto": "https://a0.muscache.com/im/pictures/miso/Hosting-563860180269901012/original/32c61338-9add-43a6-9a80-1adb18b39663.jpeg?im_w=960",
+      "area_comum": "Coworking",
+      "video": "https://youtu.be/zkcDlKtdCc0",
+      "telefone": "(48)9980-2227",
+      "email": "residencial04@gmail.com",
+      "descricao": "Com uma decoração aconchegante e romântica, este apartamento compacto é ideal para noite de núpcias ou aniversário de bodas."
+    }, 
+  
+    {
+      "id": 5,
+      "nome": "Residencial 5",
+      "alojamentos": 21,
+      "endereco": "Rua das Cerejeiras, 70 - Trindade",
+      "mapa": {
+        "lat": -27.603504638111442,  
+        "lng": -48.52820178354536 
+      },
+      "valor": 1450,
+      "tipo_moradia": "feminina",
+      "tipo_alojamento": "compartilhada",
+      "mobiliario": "Quarto com sacada, ar condicionado, frigobar, TV de tela plana à cabo e WiFi gratuito.",
+      "banheiro": "compartilhado",
+      "area": "30m²",
+      "foto": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-50770751/original/4aafc3eb-f3b5-43b3-a8a6-adbe7f5f8748.jpeg?im_w=1200",
+      "area_comum": "Piscina, cozinha e espaço gourmet.",
+      "video": "https://www.youtube.com/watch?v=_t3O5QN7_sQ",
+      "telefone": "(48) 9980-4537",
+      "email": "residencial05@gmail.com",
+      "descricao": "Lugar super tranquilo, tudo muito bem limpo e organizado, os moveis foram planejados para garantir praticidade e atender as necessidades básicas do dia a dia."
     }
-
-]
+  
+  ]

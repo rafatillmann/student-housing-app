@@ -11,14 +11,13 @@ export default class HomeScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.title}>
-        <Image style={styles.image} source={require('../../assets/house.png')}/>
-          <Text style={styles.text}>Moradias Estudantis</Text>
+          <Image style={styles.image} source={require('../../assets/house_in.png')}/>
         </View>
         <View style={styles.button}>
-          <Button title="Ver moradias" onPress={() => navigate('HomeList')} color='black' />
+          <Button title="Ver moradias" onPress={() => navigate('HomeList')} color='#7045AF'/>
         </View>
         <View style={styles.button}>
-          <Button title="Sair" onPress={() => BackHandler.exitApp() } color='black'/>
+          <Button title="Sair" onPress={() => BackHandler.exitApp() } color='#7045AF'/>
         </View>
       </ScrollView>
     );
@@ -30,8 +29,8 @@ const styles = StyleSheet.create({
     
   },
   image:{
-    height:200,
-    width:200
+    height:153,
+    width:114
   },
   title: {
     alignItems: 'center',
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   button: {
-    paddingHorizontal: 50,
-    paddingVertical: 15
+    paddingHorizontal: 10,
+    paddingVertical: 15,
   }
 });
