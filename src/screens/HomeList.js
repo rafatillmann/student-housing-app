@@ -1,44 +1,24 @@
 import * as React from 'react';
-import { ActivityIndicator, Button, ScrollView, StyleSheet, Text, TouchableOpacity, View, SectionList } from 'react-native';
+import { Button, StyleSheet, Text } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import data from '../../home.json';
 
-export default class HomeListScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Moradias',
-  };
+export default function HomeListScreen() {
 
-  constructor(props) {
-    super(props);
-    this.state = { isLoading: true }
-  }
+  const renderItem = ({ item }) => (
+    <Text>{item.nome}</Text>
+  );
 
-  render() {
-    if (this.state.isLoading) {
-      return (
-        <View style={{ flex: 1, padding: 20 }}>
-          <ActivityIndicator />
-        </View>
-      )
-    }
-
-    const { navigate } = this.props.navigation;
-    const homes = require('../../home.json');
     return (
       <>
         <FlatList
-          data={homes}
-          renderItem={({ home }) =>
-            <TouchableOpacity onPress={() => navigate('HomeDetails', { home: home })}>
-              <View>
-                <Text style={styles.contact}>{home.nome}</Text>
-              </View>
-            </TouchableOpacity>}
+          data={data}
+          renderItem={renderItem}    
         />
         <Button title="Voltar" onPress={() => navigate('Home')} color='black' />
       </>
     );
   }
-}
 
 const styles = StyleSheet.create({
   container: {
