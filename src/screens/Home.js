@@ -33,6 +33,7 @@ export default class HomeScreen extends React.Component {
           </View>
           <View style={styles.buttons}>
             <Pressable style={styles.button} onPress={() => navigate('HomeList')}>
+              <Image style={styles.icon} source={require('../../assets/home_icon.png')}/>
               <Text style={styles.text}>Ver Moradias</Text>
             </Pressable>
 
@@ -74,14 +75,20 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito'
   },
   button: {
-    paddingHorizontal: 5,
-    paddingVertical: 5,
+    paddingHorizontal: 3,
+    paddingVertical: 3,
     backgroundColor: '#7045AF',
     marginBottom: 20,
     borderRadius: 10,
-    
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   buttons: {
-    marginHorizontal: 50
+    marginHorizontal: 60
+  },
+  icon: {
+    
   }
 });
