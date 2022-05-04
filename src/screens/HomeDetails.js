@@ -1,51 +1,40 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import React, { useState }  from 'react';
-import { Text, View, StyleSheet, Button, Pressable } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { useState } from 'react';
+import { Text, View, StyleSheet, Button, Pressable, Image } from 'react-native';
 
-export default class HomeDetailsScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Informações',
-  };
+export default function HomeDetailsScreen({ route, navigation }) {
 
-  constructor(props) {
-    super(props);
-    let contact = props.navigation.getParam('home');
-    this.state = {
-      name: contact.name,
-      email: contact.email,
-      phone: contact.phone,
-      lat: contact.address.geo.lat,
-      lng: contact.address.geo.lng,
-      liked: false
-    };
+  const { item } = route.params;
+
+  const [liked, setLiked] = useState()
+
+  const handleFavorite = () => {
+    setLiked(!liked)
+    AsyncStorage.setItem('id_item', item.id)
   }
 
-  render() {
-    const { navigate } = this.props.navigation;
-    const { name, email, phone, lat, lng, liked } = this.state;
-
-
-    return (
-      <View>
-        <View style={styles.container}>
-          <Text style={styles.contactName}>{name}</Text>
-          <Text style={styles.contactDetails}>E-mail: {email}</Text>
-          <Text style={styles.contactDetails}>Telefone: {phone}</Text>
-          <Pressable onPress={() => this.setState({liked: !liked})}>
-            <MaterialCommunityIcons
-              name={liked ? "heart" : "heart-outline"}
-              size={32}
-              color={liked ? "red" : "black"}
-            />
-          </Pressable>
-        </View>
-        <View style={styles.button} >
-          <Button title="Voltar" onPress={() => navigate('HomeList')} color='black' />
-        </View>
+  return (
+    <View>
+      <View style={styles.container}>
+        <Pressable onPress={() => handleFavorite()}>
+          <MaterialCommunityIcons
+            name={liked ? 'heart' : 'heart-outline'}
+            size={32}
+            color={'#E14594'}
+          />
+        </Pressable>
       </View>
-    );
-  }
+      <View style={styles.button} >
+        <Pressable onPress={() => navigation.navigate('HomeList')}>
+          <Text>Voltar</Text>
+        </Pressable>
+      </View>
+      <Image sou></Image>
+    </View>
+  );
 }
+
 
 const styles = StyleSheet.create({
   container: {
