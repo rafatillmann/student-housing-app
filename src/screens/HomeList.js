@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 5,
+    marginTop: 8,
     marginBottom: 5
   },
   mapicon: {
