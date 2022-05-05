@@ -16,6 +16,10 @@ export default function HomeListScreen({navigation}) {
           <Image style={styles.mapicon} source={require('../../assets/map_icon.png')}/>
           <Text>{item.endereco}</Text>
         </View>
+        <View style={styles.preco}>
+          <Image style={styles.moneyicon} source={require('../../assets/money.png')}/>
+          <Text style={styles.contentvalor}>{item.valor}</Text>
+        </View>
       </View>
       <Pressable style={styles.button} onPress={() => navigation.navigate('HomeDetails', {item: item})}>
         <Text style={styles.text}>Ver detalhes</Text>
@@ -72,7 +76,22 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 5
   },
+  preco: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 8,
+    marginBottom: 5
+  },
   mapicon: {
     marginRight: 5
+  },
+  moneyicon: {
+    marginRight: 6,
+    marginLeft: 3
+  },
+  contentvalor: {
+    fontWeight: 'bold',
+    color: '#182952'
   }
 })
