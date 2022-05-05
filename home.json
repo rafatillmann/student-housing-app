@@ -8,7 +8,7 @@
       "lat": -27.594433646868346,
       "lng": -48.500383819024215
     },
-    "valor": 1500,
+    "valor": "R$1500,00",
     "tipo_moradia": "mista",
     "tipo_alojamento": "individual",
     "mobiliario": "Oferecemos colchões AA Ortobom, mesmo utilizados em hotéis 5 estrelas, apartamento amplo e eficiente, 100% recém reformados, móveis embutidos, ar-condicionado, cozinha equipada por completo, com geladeira, microondas, cooktop e utensílios para cozinhar.",
@@ -30,7 +30,7 @@
       "lat": -27.594433646868346,
       "lng": -48.500383819024215
     },
-    "valor": 1200,
+    "valor": "R$1200,00",
     "tipo_moradia": "feminina",
     "tipo_alojamento": "individual",
     "mobiliario": "Ar-condicionado, cozinha equipada por completo, com geladeira, microondas, cooktop e utensílios para cozinhar.",
@@ -52,7 +52,7 @@
       "lat": -27.59554994335299,
       "lng": -48.50179548380447
     },
-    "valor": 1300,
+    "valor": "R$2000,00",
     "tipo_moradia": "masculina",
     "tipo_alojamento": "individual",
     "mobiliario": "Cozinha com frigobar, cooktop, micro-ondas, sanduicheira, liquidificador, pratos e talheres, copos, taças de vinho e de champanhe. Espaço reservado para as malas, e guarda-roupas em drywall.",
@@ -74,7 +74,7 @@
       "lat": -27.59554994335299,
       "lng": -48.50179548380447
     },
-    "valor": 1300,
+    "valor": "R$1300,00",
     "tipo_moradia": "masculina",
     "tipo_alojamento": "individual",
     "mobiliario": "Cozinha com frigobar, cooktop, micro-ondas, sanduicheira, liquidificador, pratos e talheres, copos, taças de vinho e de champanhe. Espaço reservado para as malas, e guarda-roupas em drywall.",
@@ -96,7 +96,7 @@
       "lat": -27.603504638111442,
       "lng": -48.52820178354536
     },
-    "valor": 1450,
+    "valor": "R$1550,00",
     "tipo_moradia": "feminina",
     "tipo_alojamento": "compartilhada",
     "mobiliario": "Quarto com sacada, ar condicionado, frigobar, TV de tela plana à cabo e WiFi gratuito.",
