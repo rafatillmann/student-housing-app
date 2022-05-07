@@ -71,32 +71,32 @@ export default function HomeDetailsScreen({ route, navigation }) {
 
 
       <View style={styles.header}>
-        <Text style={{ fontFamily: 'Nunito', fontSize: 24, fontWeight: '700', color: '#182952' }}> {item.nome} </Text>
-        <Text style={{ fontFamily: 'Nunito', fontSize: 16 }}> {item.endereco} </Text>
-        <Text style={{ fontFamily: 'Nunito', fontSize: 32, fontWeight: '700', marginTop: 5, color: '#182952' }}> {item.valor} </Text>
+        <Text style={{ fontFamily: 'Nunito', fontSize: 24, fontWeight: '700', color: '#182952', marginHorizontal: 10 }}>{item.nome} </Text>
+        <Text style={{ fontFamily: 'Nunito', fontSize: 16, marginHorizontal: 10 }}>{item.endereco} </Text>
+        <Text style={{ fontFamily: 'Nunito', fontSize: 32, fontWeight: '700', marginTop: 5, color: '#182952', marginHorizontal: 10 }}>{item.valor} </Text>
       </View>
 
       <View style={styles.about}>
 
         <View style={styles.description}>
-          <Text style={styles.sub_title}> Descrição </Text>
-          <Text style={styles.text}> {item.descricao} </Text>
+          <Text style={styles.sub_title}>Descrição</Text>
+          <Text style={styles.text}>{item.descricao}</Text>
         </View>
 
-        <View style={{ marginTop: 20 }}>
-          <Text style={styles.sub_title}> Informações do alojamento </Text>
-          <Text style={styles.text}> Mobiliario: {item.mobiliario} </Text>
-          <Text style={styles.text}> Tipo de Moradia: {item.tipo_moradia} </Text>
-          <Text style={styles.text}> Tipo de alojamento: {item.tipo_alojamento} </Text>
-          <Text style={styles.text}> Banheiro: {item.banheiro} </Text>
-          <Text style={styles.text}> Área: {item.area} </Text>
-          <Text style={styles.text}> Área Comum: {item.area_comum} </Text>
+        <View style={{ marginTop: 20, marginHorizontal: 10 }}>
+          <Text style={styles.sub_title}>Informações do alojamento</Text>
+          <Text style={styles.text}>Mobiliário: {item.mobiliario}</Text>
+          <Text style={styles.text}>Tipo de Moradia: {item.tipo_moradia}</Text>
+          <Text style={styles.text}>Tipo de Alojamento: {item.tipo_alojamento}</Text>
+          <Text style={styles.text}>Banheiro: {item.banheiro}</Text>
+          <Text style={styles.text}>Área: {item.area}</Text>
+          <Text style={styles.text}>Área Comum: {item.area_comum}</Text>
         </View>
 
-        <View style={{ marginTop: 20 }}>
-          <Text style={styles.sub_title}> Contato </Text>
-          <Text style={styles.text}> {item.telefone} </Text>
-          <Text style={styles.text}> {item.email} </Text>
+        <View style={{ marginTop: 20, marginHorizontal: 10 }}>
+          <Text style={styles.sub_title}>Contato </Text>
+          <Text style={styles.text}>Telefone: {item.telefone} </Text>
+          <Text style={styles.text}>Email: {item.email} </Text>
         </View>
 
 
@@ -118,9 +118,6 @@ export default function HomeDetailsScreen({ route, navigation }) {
 
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
   image: {
     aspectRatio: 1.5
   },
@@ -128,7 +125,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'flex-start',
     marginTop: 20,
-    marginLeft: 10
+    marginLeft: 10,
+    marginHorizontal: 20
   },
   icons: {
     position: 'absolute',
@@ -159,7 +157,10 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   text: {
-    fontFamily: 'Nunito',
-    marginBottom: 5
+    fontFamily: 'Nunito', 
+    marginBottom: 5 
+  },
+  description: {
+    marginHorizontal: 10
   }
 });
