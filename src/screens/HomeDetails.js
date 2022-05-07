@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image, Pressable, StyleSheet, Text, View, Linking } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useFonts } from 'expo-font';
@@ -11,18 +11,27 @@ export default function HomeDetailsScreen({ route, navigation }) {
 
   const [liked, setLiked] = useState()
 
-  const [homes, setHomes] = useState()
+  useEffect(() => {
+    AsyncStorage.getItem(`${item.id}`).then(value => value
+      && setLiked(true) )
+  })
+
 
   const handleFavorite = () => {
+    AsyncStorage.setItem(`${item.id}`, JSON.stringify(item))
+    setLiked(true)
+  }
 
-    setLiked(!liked)
+  const handleNotFavorite = () => {
+    AsyncStorage.removeItem(`${item.id}`)
+    setLiked(false)
+  }
 
-    // AsyncStorage.getItem('homes')
-    //   .then(req => JSON.parse(req))
-    //   .then(json => setHomes(json))
-
-    // AsyncStorage.setItem('homes', JSON.stringify(storage))
-    // .then(json => console.log(homes))
+  const handleStorage = (item) => {
+  
+    AsyncStorage.getItem(`${item.id}`).then(value => value
+      ? handleNotFavorite()
+      : handleFavorite())
 
   }
 
@@ -42,7 +51,7 @@ export default function HomeDetailsScreen({ route, navigation }) {
 
       <View style={styles.icons}>
         <View style={styles.flex_icon}>
-          <Pressable style={styles.icon} onPress={() => handleFavorite()}>
+          <Pressable style={styles.icon} onPress={() => handleStorage(item)}>
             <MaterialCommunityIcons
               name={liked ? 'heart' : 'heart-outline'}
               size={40}
@@ -64,7 +73,7 @@ export default function HomeDetailsScreen({ route, navigation }) {
       <View style={styles.header}>
         <Text style={{ fontFamily: 'Nunito', fontSize: 24, fontWeight: '700', color: '#182952' }}> {item.nome} </Text>
         <Text style={{ fontFamily: 'Nunito', fontSize: 16 }}> {item.endereco} </Text>
-        <Text style={{ fontFamily: 'Nunito', fontSize: 32, fontWeight: '700', marginTop: 5, color: '#182952' }}> R$ {item.valor} </Text>
+        <Text style={{ fontFamily: 'Nunito', fontSize: 32, fontWeight: '700', marginTop: 5, color: '#182952' }}> {item.valor} </Text>
       </View>
 
       <View style={styles.about}>
@@ -148,9 +157,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#182952',
     marginBottom: 10
-  }, 
+  },
   text: {
-    fontFamily: 'Nunito', 
+    fontFamily: 'Nunito',
     marginBottom: 5
   }
 });

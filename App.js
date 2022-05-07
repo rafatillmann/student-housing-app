@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/Home'
 import HomeListScreen from './src/screens/HomeList';
 import HomeDetailsScreen from './src/screens/HomeDetails';
+import FavoritesScreen from './src/screens/Favorites';
 
 export default function App(){
 
@@ -17,6 +18,7 @@ export default function App(){
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="HomeList" component={HomeListScreen} />
           <Stack.Screen name="HomeDetails" component={HomeDetailsScreen} />
+          <Stack.Screen name="Favorites" component={FavoritesScreen} />
         </Stack.Navigator>
     </NavigationContainer>
   )

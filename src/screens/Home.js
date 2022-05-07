@@ -37,6 +37,11 @@ export default class HomeScreen extends React.Component {
               <Text style={styles.text}>Ver Moradias</Text>
             </Pressable>
 
+            <Pressable style={styles.button} onPress={() => navigate('Favorites')}>
+              <Image style={styles.icon1} source={require('../../assets/home_icon.png')}/>
+              <Text style={styles.text}>Ver Favoritos</Text>
+            </Pressable>
+
             <Pressable style={styles.button} onPress={() => BackHandler.exitApp()}>
               <Image style={styles.icon2} source={require('../../assets/exit_icon.png')}/>
               <Text style={styles.text}>Sair</Text>
