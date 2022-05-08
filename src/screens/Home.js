@@ -38,12 +38,12 @@ export default class HomeScreen extends React.Component {
             </Pressable>
 
             <Pressable style={styles.button} onPress={() => navigate('Favorites')}>
-              <Image style={styles.icon1} source={require('../../assets/home_icon.png')}/>
+              <Image style={styles.icon2} source={require('../../assets/heart_icon.png')}/>
               <Text style={styles.text}>Ver Favoritos</Text>
             </Pressable>
 
             <Pressable style={styles.button} onPress={() => BackHandler.exitApp()}>
-              <Image style={styles.icon2} source={require('../../assets/exit_icon.png')}/>
+              <Image style={styles.icon3} source={require('../../assets/exit_icon.png')}/>
               <Text style={styles.text}>Sair</Text>
             </Pressable>
           </View>
@@ -99,6 +99,10 @@ const styles = StyleSheet.create({
     height: 22
   },
   icon2: {
+    width: 25,
+    height: 22
+  }, 
+  icon3: {
     width: 22,
     height: 22
   }

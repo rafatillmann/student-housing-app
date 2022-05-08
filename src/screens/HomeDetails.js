@@ -100,8 +100,8 @@ export default function HomeDetailsScreen({ route, navigation }) {
         </View>
 
 
-        <View style={{ marginTop: 20 }}>
-          <Text style={styles.sub_title}> Mais detalhes </Text>
+        <View style={{ marginTop: 20, marginHorizontal: 10 }}>
+          <Text style={styles.sub_title}>Mais detalhes </Text>
           <Pressable onPress={() => Linking.openURL(item.video)}>
             <MaterialCommunityIcons
               name={'play-circle'}
