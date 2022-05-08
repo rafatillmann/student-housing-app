@@ -11,17 +11,19 @@ export default function HomeDetailsScreen({ route, navigation }) {
 
   const [liked, setLiked] = useState()
 
+  // AsyncStorage é uma API utilizada para armazenar dados persistentes no dispositivo.
   useEffect(() => {
     AsyncStorage.getItem(`${item.id}`).then(value => value
       && setLiked(true) )
   })
 
-
+  // seta como favorito
   const handleFavorite = () => {
     AsyncStorage.setItem(`${item.id}`, JSON.stringify(item))
     setLiked(true)
   }
 
+  // retira dos favoritos
   const handleNotFavorite = () => {
     AsyncStorage.removeItem(`${item.id}`)
     setLiked(false)

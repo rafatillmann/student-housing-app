@@ -5,6 +5,7 @@ import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import * as Font from 'expo-font';
 
 export default class HomeScreen extends React.Component {
+  // opções de nevageção 
   static navigationOptions = {
     title: 'Home',
   };
@@ -13,6 +14,7 @@ export default class HomeScreen extends React.Component {
     fontsLoaded: false,
   };
   
+  // carregamento da fonte. ascync recebe a promise (fonte) e retorna um valor ou erro. Em await, espera-se a promise finalizar.
   async loadFonts() {
     await Font.loadAsync({
       Nunito: require('../../assets/fonts/Nunito-Regular.ttf'),
@@ -20,9 +22,11 @@ export default class HomeScreen extends React.Component {
     this.setState({ fontsLoaded: true });
   }
 
+  // assim que inicia, chama a função loadFonts()
   componentDidMount() {
     this.loadFonts();
   }
+  // método da minha classe que vai "criar" meu elemento na tela
   render() {
     const {navigate} = this.props.navigation;
     if  (this.state.fontsLoaded) {

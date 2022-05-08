@@ -3,8 +3,10 @@ import { Button, StyleSheet, Text, View, Pressable, Image } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import data from '../../home.json';
 
+// export = "exporta" para deixar visível para as outras classes
 export default function HomeListScreen({navigation}) {
 
+  // renderiza meu item
   const renderItem = ({ item }) => (
     <View style={styles.card}>
       <View style={styles.imgbox}>
