@@ -66,7 +66,7 @@ export default function HomeDetailsScreen({ route, navigation }) {
               color={'#E14594'}
             />
           </Pressable>
-          <Pressable style={styles.icon}>
+          <Pressable style={styles.icon} onPress={() => Linking.openURL(`geo:0,0?q=${item.mapa.lat}, ${item.mapa.lng}`)}>
             <MaterialCommunityIcons
               name={'map'}
               size={40}
