@@ -3,20 +3,24 @@ import { Button, StyleSheet, Text, View, Pressable, Image } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+// classe igual ao HomeList, porém em vez da lista de itens vir pelo import data, ela é capturada no Async
 export default function FavoritesScreen({ navigation }) {
 
+    // aqui é uma varíavel de estado, significa que sempre que ela for atualizado no setState, quem usa ela será recarregado também
     const [data, setData] = useState([])
 
+    // useEffect é uma função React que ela executa apenas uma única vez quando o FavoritesScreen é carregado
+    // no caso o que ele faz é pegar a lista de favoritos, se tivesse fora, isso ia ficar executando o tempo todo 
     useEffect(async () => {
         await AsyncStorage.getAllKeys()
-        .then(list => handleFavorites(list))
+        .then(list => handleFavorites(list)) // ele chama essa função externa 
     }, [])
 
     const handleFavorites = (list) => {
 
-        for (let item of list){
-            AsyncStorage.getItem(item)
-            .then(value => setData(data => [...data, JSON.parse(value)]))
+        for (let item of list){ // para cada id da lista
+            AsyncStorage.getItem(item) // ele captura o json completo
+            .then(value => setData(data => [...data, JSON.parse(value)])) // e atualizada o data, que é a lista de favoritos 
         }
     }
 

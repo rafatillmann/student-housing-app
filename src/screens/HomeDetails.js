@@ -12,6 +12,9 @@ export default function HomeDetailsScreen({ route, navigation }) {
   const [liked, setLiked] = useState()
 
   // AsyncStorage é uma API utilizada para armazenar dados persistentes no dispositivo.
+  // useEffect executa na primeira vez que a tela carregar, dentro dele é pesquisado se essa moradia
+  // exisite nos favoritos, se sim, ele seta o liked como true (isso é necessário, porque sempre que sair
+  // dessa tela, ele vai perder o seu valor)
   useEffect(() => {
     AsyncStorage.getItem(`${item.id}`).then(value => value
       && setLiked(true) )
@@ -29,8 +32,11 @@ export default function HomeDetailsScreen({ route, navigation }) {
     setLiked(false)
   }
 
-  const handleStorage = (item) => {
+  const handleStorage = (item) => { // sempre que clicar nos favoritos, chama essa função
   
+    // ele tenta pegar dentro do storage, o item pelo ID, se retornar ID, significa que 
+    // já existe na lista, então chama a função NotFavorite, para tirar da lista
+    // se não existir na lista, chama a função para colocar na lista
     AsyncStorage.getItem(`${item.id}`).then(value => value
       ? handleNotFavorite()
       : handleFavorite())
@@ -52,7 +58,7 @@ export default function HomeDetailsScreen({ route, navigation }) {
       </View>
 
       <View style={styles.icons}>
-        <View style={styles.flex_icon}>
+        <View style={styles.flex_icon}> 
           <Pressable style={styles.icon} onPress={() => handleStorage(item)}>
             <MaterialCommunityIcons
               name={liked ? 'heart' : 'heart-outline'}
